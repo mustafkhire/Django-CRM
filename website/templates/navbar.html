@@ -13,11 +13,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'add_record' %}">Add Record</a>
                 </li>
-
+                {% endif %}
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'logout' %}">Logout</a>
                 </li>
-
                 {% else %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'register' %}">Register</a>
@@ -26,8 +28,6 @@
                     <a class="nav-link" href="{% url 'home' %}">Login</a>
                 </li>
                 {% endif %}
-
-            </ul>
         </div>
     </div>
 </nav>
