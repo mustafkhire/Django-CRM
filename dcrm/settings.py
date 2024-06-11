@@ -19,7 +19,8 @@ SECRET_KEY = env('SECRET_KEY', default='django-insecure-&gx$e+5xw&dibspe&+rut0s=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('DEBUG', default=True)
 
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[]) + ['django-crm-delta-gray.vercel.app']
+
 
 # Application definition
 
