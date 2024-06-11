@@ -5,15 +5,14 @@
             "src": "dcrm/wsgi.py",
             "use": "@vercel/python",
             "config": {
-                "maxLambdaSize": "15mb",
-                "runtime": "python3.8"
+                "maxLambdaSize": "50mb"
             }
         },
         {
-            "src": "build.sh",
+            "src": "dcrm/settings.py",
             "use": "@vercel/static-build",
             "config": {
-                "distDir": "staticfiles_build"
+                "distDir": "staticfiles"
             }
         }
     ],
@@ -26,6 +25,5 @@
             "src": "/(.*)",
             "dest": "dcrm/wsgi.py"
         }
-    ],
-    "outputDirectory": "ui/staticfiles"
+    ]
 }
